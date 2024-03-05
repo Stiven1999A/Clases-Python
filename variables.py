@@ -65,3 +65,32 @@ tuple_1 = (height, age, True, whole_name)
 for value in tuple_1:
     print(value)
 
+#Now, we have the sets: they don't have any repeated objects, they are not ordered.
+    
+set_1 = {1, 2, name, height, last_name, name}
+print(set_1)    
+
+#Exercise: Given a list, in which there are some repeated objects, creates
+#a new list without repeated objects. (hint: use the function list and set)
+
+def delete_repeated_objects_from_a_list(list_in):
+    return list(set(list_in))
+
+list_exercise = [1,1,1,1,1,2,2,2,2,3,4,4,5,5,5,5]
+print(delete_repeated_objects_from_a_list(list_exercise))
+
+#Diccionaries: they have the same syntax from sets, but follow a specific
+#layout given by key:valuy where the key is the 
+
+dict_1 = {
+    'name': name,
+    'last_name': last_name,
+    'occupation': 'Student'
+}
+for key in dict_1.keys():
+    print(key)
+
+
+for key, value in dict_1.items():
+    print(key+':',value)
+
