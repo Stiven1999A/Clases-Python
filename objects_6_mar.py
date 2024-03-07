@@ -41,4 +41,26 @@ r = Rectangulo(nombre='rectangulo', color='Rojo', base=4, altura=5)
 c = Circulo(nombre='circulo', color='Verde', radio=2)
 
 print(f"El {t.nombre} que elegiste es de color {t.color} y tiene un area de {t.calcular_area()}")
-                                                                                                                                                
+
+# Ejemplo cuenta bancaria
+
+class Cuenta_Bancaria:
+  def __init__(self, titular, saldo_inicial):
+    self.titular = titular
+    self.__saldo= saldo_inicial
+    
+    def depositar(self, cantidad):
+      self.__saldo += cantidad
+      print("Deposito exitoso, el saldo actual es " + str(self.__saldo))
+
+    def retirar(self, cantidad):
+      if cantidad >0 and cantidad <= self.__saldo:
+        self.__saldo -= cantidad
+        print("Retiro exitoso, el saldo actual es: " + str(self.__saldo))
+
+    def obtener_saldo(self):
+      return self.__saldo
+
+cuenta_estiben = Cuenta_Bancaria("Estiben", saldo_inicial=5000)
+
+print(cuenta_estiben.obtener_saldo())
